@@ -1,3 +1,43 @@
+# TASK DESCRIPTION
+
+Given Endpoints
+endpoint_1: "http://www.randomnumberapi.com/api/v1.0/random",
+endpoint_2: "https://dog.ceo/api/breeds/image/random"
+
+Task:
+
+1. Write a react component "ArticleTeasers". It should be a div with classname "ab-testing". This div should contain a headline with text "article teasers" and a list with classname "article-teasers-list".
+2. Write another react component "ArticleTeaser". It should be a list item with classname "article-teaser".
+3. Fetch number of teasers from endpoint_1. Pass URL arguments min = 0, max = 20, count = 1.
+4. Use the returned number n to render ArticleTeaser n times inside ArticleTeasers.
+5. For each ArticleTeaser, fetch the image url from endpoint_2 and display the image inside the ArticleTeaser.
+
+## Expected result in the DOM:
+
+<div class="ab-testing">
+    <h1>article teasers</h1>
+    <ul class="article-teasers-list">
+        <li class="article-teaser">
+            <img src="imageURL_1" />
+        </li>
+        <li class="article-teaser">
+            <img src="imageURL_2" />
+        </li>
+        [...]
+        <li class="article-teaser">
+            <img src="imageURL_n" />
+        </li>
+    </ul>
+</div>
+------------------------------
+
+Requirements:
+
+1. Use TypeScript
+2. Make sure your code handles API failures.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
